@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "lang": "en",
+    "title": "Foodly — food delivery",
+    "description": "Foodly — fast delivery of pizza, sushi, burgers and desserts across the city."
+  },
+  "header": {
+    "nav_label": "Main navigation",
+    "open_menu": "Open menu",
+    "open_cart": "Open cart",
+    "cart_alt": "Cart"
+  },
+  "nav": {
+    "menu": "Menu",
+    "benefits": "Benefits",
+    "reviews": "Reviews",
+    "faq": "FAQ"
+  },
+  "hero": {
+    "title": "Your favourite food delivered in 30\u00a0minutes",
+    "subtitle": "Pizza, sushi, burgers, desserts and drinks — in one click.",
+    "view_menu": "View menu",
+    "why": "Why Foodly?",
+    "stats_label": "Service at a glance",
+    "stat_time": "30\u00a0min",
+    "stat_time_label": "Average delivery time",
+    "stat_rating_label": "Rating from reviews",
+    "stat_dishes_label": "Dishes on the menu"
+  },
+  "catalog": {
+    "title": "Menu",
+    "subtitle": "Pick your dishes, add them to the cart and place your order.",
+    "filter_label": "Filter dishes by category",
+    "all": "All",
+    "pizza": "Pizza",
+    "sushi": "Sushi",
+    "burgers": "Burgers",
+    "desserts": "Desserts",
+    "drinks": "Drinks",
+    "show_more": "Show more"
+  },
+  "benefits": {
+    "title": "Why Foodly?",
+    "fast_title": "Super-fast delivery",
+    "fast_text": "About 30 minutes anywhere in the city on average.",
+    "quality_title": "Quality control",
+    "quality_text": "We work only with trusted kitchens and suppliers.",
+    "prices_title": "Transparent prices",
+    "prices_text": "No hidden fees or markups."
+  },
+  "reviews": {
+    "title": "Reviews",
+    "rated_5": "Rated 5 out of 5",
+    "rated_4": "Rated 4 out of 5",
+    "maria": "Maria",
+    "maria_alt": "Maria’s avatar",
+    "maria_text": "Super fast delivery, the food was hot and tasty! This is my third order already.",
+    "anastasia": "Anastasia",
+    "anastasia_alt": "Anastasia’s avatar",
+    "anastasia_text": "Delivered in 25 minutes, the pizza was hot and the dough soft. I love that you can add a note to your order.",
+    "mykhailo": "Mykhailo",
+    "mykhailo_alt": "Mykhailo’s avatar",
+    "mykhailo_text": "Easy-to-use menu and fair prices. The courier called ahead and brought everything in a thermal bag.",
+    "olena": "Olena",
+    "olena_alt": "Olena’s avatar",
+    "olena_text": "Fresh rolls, rice not overcooked. Neat packaging, and chopsticks and sauces were included without asking.",
+    "serhii": "Serhii",
+    "serhii_alt": "Serhii’s avatar",
+    "serhii_text": "The app runs smoothly and Apple Pay works. The burgers arrived with the buns intact.",
+    "viktoriia": "Viktoriia",
+    "viktoriia_alt": "Viktoriia’s avatar",
+    "viktoriia_text": "I often order desserts, and they always arrive cold with the glaze intact. Thanks for the care!",
+    "artem": "Artem",
+    "artem_alt": "Artem’s avatar",
+    "artem_text": "Ordered late at night and got it in 35 minutes. I liked seeing the order status in real time.",
+    "natalia": "Natalia",
+    "natalia_alt": "Natalia’s avatar",
+    "natalia_text": "I love the “Combo” section. Better value for money than the competition, and the deals change often.",
+    "pavlo": "Pavlo",
+    "pavlo_alt": "Pavlo’s avatar",
+    "pavlo_text": "Great support: they helped me change the address after I had ordered, and the courier adapted quickly.",
+    "kseniia": "Kseniia",
+    "kseniia_alt": "Kseniia’s avatar",
+    "kseniia_text": "Handy that you can tip by card. The courier was polite and brought the order to my door despite the rain.",
+    "dmytro": "Dmytro",
+    "dmytro_alt": "Dmytro’s avatar",
+    "dmytro_text": "Deliveries are never late and notifications arrive on time. Courier tracking helps me plan my time."
+  },
+  "faq": {
+    "q1": "What does delivery include?",
+    "a1": "We deliver in thermal bags so your food arrives hot and safe.",
+    "q2": "How long does delivery take?",
+    "a2": "About 30 minutes across the city on average. We show the exact time at checkout.",
+    "q3": "How can I pay for my order?",
+    "a3": "Pay by card online, with Apple Pay/Google Pay, or in cash to the courier.",
+    "q4": "Can I change or cancel my order?",
+    "a4": "Yes, contact support within 5 minutes of placing it and we will adjust your order."
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "nav_label": "Footer navigation",
+    "top": "Back to top"
+  },
+  "cart": {
+    "title": "Cart",
+    "close": "Close cart",
+    "empty": "Your cart is empty. Add something from the menu.",
+    "total": "Total:",
+    "checkout": "Checkout"
+  }
+}

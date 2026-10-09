@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{meta.lang}}">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./assets/icons/favicon.png" />
+    <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Foodly — быстрая доставка пиццы, суши, бургеров и десертов по городу."
+      content="{{meta.description}}"
     />
-    <title>Foodly — доставка еды</title>
+    <title>{{meta.title}}</title>
   </head>
   <body>
     <div id="app">
@@ -17,7 +17,7 @@
         <div class="o-container header__inner">
           <a class="header__logo" href="#hero">
             <img
-              src="./assets/icons/logo.png"
+              src="/assets/icons/logo.png"
               alt="Foodly"
               class="header__logo-icon"
               width="32"
@@ -26,11 +26,11 @@
             <span class="header__logo-text">Foodly</span>
           </a>
 
-          <nav class="header__nav" aria-label="Основная навигация">
+          <nav class="header__nav" aria-label="{{header.nav_label}}">
             <button
               class="header__burger"
               type="button"
-              aria-label="Открыть меню"
+              aria-label="{{header.open_menu}}"
               aria-expanded="false"
               aria-controls="header-menu"
             >
@@ -40,16 +40,16 @@
 
             <ul class="header__menu" id="header-menu" aria-hidden="true">
               <li class="header__menu-item">
-                <a href="#catalog" class="header__link">Меню</a>
+                <a href="#catalog" class="header__link">{{nav.menu}}</a>
               </li>
               <li class="header__menu-item">
-                <a href="#benefits" class="header__link">Преимущества</a>
+                <a href="#benefits" class="header__link">{{nav.benefits}}</a>
               </li>
               <li class="header__menu-item">
-                <a href="#reviews" class="header__link">Отзывы</a>
+                <a href="#reviews" class="header__link">{{nav.reviews}}</a>
               </li>
               <li class="header__menu-item">
-                <a href="#faq" class="header__link">FAQ</a>
+                <a href="#faq" class="header__link">{{nav.faq}}</a>
               </li>
             </ul>
           </nav>
@@ -57,12 +57,12 @@
           <button
             class="header__cart-button"
             type="button"
-            aria-label="Открыть корзину"
+            aria-label="{{header.open_cart}}"
             data-cart-open
           >
             <img
-              src="./assets/icons/cart.svg"
-              alt="Корзина"
+              src="/assets/icons/cart.svg"
+              alt="{{header.cart_alt}}"
               class="header__cart-icon"
               width="32"
               height="32"
@@ -79,37 +79,37 @@
           <div class="o-container hero__inner">
             <div class="hero__content">
               <h1 id="hero-title" class="hero__title">
-                Доставка любимой еды за&nbsp;30&nbsp;минут
+                {{hero.title}}
               </h1>
               <p class="hero__subtitle">
-                Пицца, суши, бургеры, десерты и напитки — в один клик.
+                {{hero.subtitle}}
               </p>
 
               <div class="hero__actions">
                 <a href="#catalog" class="button button--primary">
-                  Смотреть меню
+                  {{hero.view_menu}}
                 </a>
                 <button
                   type="button"
                   class="button button--secondary"
                   data-scroll-to="#benefits"
                 >
-                  Почему Foodly?
+                  {{hero.why}}
                 </button>
               </div>
 
-              <ul class="hero__stats" aria-label="Краткая статистика сервиса">
+              <ul class="hero__stats" aria-label="{{hero.stats_label}}">
                 <li class="hero__stat">
-                  <span class="hero__stat-value">30&nbsp;мин</span>
-                  <span class="hero__stat-label">Среднее время доставки</span>
+                  <span class="hero__stat-value">{{hero.stat_time}}</span>
+                  <span class="hero__stat-label">{{hero.stat_time_label}}</span>
                 </li>
                 <li class="hero__stat">
                   <span class="hero__stat-value">4.9</span>
-                  <span class="hero__stat-label">Оценка по отзывам</span>
+                  <span class="hero__stat-label">{{hero.stat_rating_label}}</span>
                 </li>
                 <li class="hero__stat">
                   <span class="hero__stat-value">120+</span>
-                  <span class="hero__stat-label">Блюд в меню</span>
+                  <span class="hero__stat-label">{{hero.stat_dishes_label}}</span>
                 </li>
               </ul>
             </div>
@@ -117,10 +117,10 @@
             <div class="hero__media" aria-hidden="true">
               <!-- Картинка/иллюстрация с aspect-ratio -->
               <picture class="hero__image-wrapper">
-                <source srcset="./assets/images/hero.avif" type="image/avif" />
-                <source srcset="./assets/images/hero.webp" type="image/webp" />
+                <source srcset="/assets/images/hero.avif" type="image/avif" />
+                <source srcset="/assets/images/hero.webp" type="image/webp" />
                 <img
-                  src="./assets/images/hero.jpg"
+                  src="/assets/images/hero.jpg"
                   class="hero__image"
                   alt=""
                   loading="lazy"
@@ -135,9 +135,9 @@
         <section id="catalog" class="catalog" aria-labelledby="catalog-title">
           <div class="o-container">
             <header class="section-header">
-              <h2 id="catalog-title" class="section-title">Меню</h2>
+              <h2 id="catalog-title" class="section-title">{{catalog.title}}</h2>
               <p class="section-subtitle">
-                Выбирай блюда, добавляй в корзину и оформляй заказ.
+                {{catalog.subtitle}}
               </p>
             </header>
 
@@ -146,7 +146,7 @@
               <div
                 class="category-filter__list"
                 role="tablist"
-                aria-label="Фильтр по категориям блюд"
+                aria-label="{{catalog.filter_label}}"
               >
                 <button
                   class="category-filter__item category-filter__item--active"
@@ -155,7 +155,7 @@
                   aria-selected="true"
                   data-category="all"
                 >
-                  Все
+                  {{catalog.all}}
                 </button>
                 <button
                   class="category-filter__item"
@@ -164,7 +164,7 @@
                   aria-selected="false"
                   data-category="pizza"
                 >
-                  Пицца
+                  {{catalog.pizza}}
                 </button>
                 <button
                   class="category-filter__item"
@@ -173,7 +173,7 @@
                   aria-selected="false"
                   data-category="sushi"
                 >
-                  Суши
+                  {{catalog.sushi}}
                 </button>
                 <button
                   class="category-filter__item"
@@ -182,7 +182,7 @@
                   aria-selected="false"
                   data-category="burgers"
                 >
-                  Бургеры
+                  {{catalog.burgers}}
                 </button>
                 <button
                   class="category-filter__item"
@@ -191,7 +191,7 @@
                   aria-selected="false"
                   data-category="desserts"
                 >
-                  Десерты
+                  {{catalog.desserts}}
                 </button>
                 <button
                   class="category-filter__item"
@@ -200,7 +200,7 @@
                   aria-selected="false"
                   data-category="drinks"
                 >
-                  Напитки
+                  {{catalog.drinks}}
                 </button>
               </div>
             </div>
@@ -280,7 +280,7 @@
               data-show-more
               hidden
             >
-              Показать ещё
+              {{catalog.show_more}}
             </button>
           </div>
         </section>
@@ -293,28 +293,28 @@
         >
           <div class="o-container">
             <header class="section-header">
-              <h2 id="benefits-title" class="section-title">Почему Foodly?</h2>
+              <h2 id="benefits-title" class="section-title">{{benefits.title}}</h2>
             </header>
 
             <div class="benefits__grid">
               <article class="benefits__item" data-benefit>
-                <h3 class="benefits__item-title">Супербыстрая доставка</h3>
+                <h3 class="benefits__item-title">{{benefits.fast_title}}</h3>
                 <p class="benefits__item-text">
-                  В среднем за 30 минут по всему городу.
+                  {{benefits.fast_text}}
                 </p>
               </article>
 
               <article class="benefits__item" data-benefit>
-                <h3 class="benefits__item-title">Контроль качества</h3>
+                <h3 class="benefits__item-title">{{benefits.quality_title}}</h3>
                 <p class="benefits__item-text">
-                  Работаем только с проверенными кухнями и поставщиками.
+                  {{benefits.quality_text}}
                 </p>
               </article>
 
               <article class="benefits__item" data-benefit>
-                <h3 class="benefits__item-title">Прозрачные цены</h3>
+                <h3 class="benefits__item-title">{{benefits.prices_title}}</h3>
                 <p class="benefits__item-text">
-                  Без скрытых комиссий и надбавок.
+                  {{benefits.prices_text}}
                 </p>
               </article>
             </div>
@@ -325,7 +325,7 @@
         <section id="reviews" class="reviews" aria-labelledby="reviews-title">
           <div class="o-container">
             <header class="section-header">
-              <h2 id="reviews-title" class="section-title">Отзывы</h2>
+              <h2 id="reviews-title" class="section-title">{{reviews.title}}</h2>
             </header>
 
             <div class="reviews__slider" data-reviews-slider>
@@ -335,22 +335,21 @@
                     <div class="reviews__header">
                       <img
                         class="reviews__avatar"
-                        src="./assets/avatars/default.svg"
-                        alt="Аватар Анастасии"
+                        src="/assets/avatars/default.svg"
+                        alt="{{reviews.maria_alt}}"
                         loading="lazy"
                         decoding="async"
                         width="48"
                         height="48"
                       />
-                      <span class="reviews__name">Мария</span>
+                      <span class="reviews__name">{{reviews.maria}}</span>
                     </div>
 
                     <p class="reviews__text">
-                      Очень быстро доставили, еда горячая и вкусная! Заказываю
-                      уже в третий раз.
+                      {{reviews.maria_text}}
                     </p>
 
-                    <div class="reviews__rating" role="img" aria-label="Оценка 5 из 5">
+                    <div class="reviews__rating" role="img" aria-label="{{reviews.rated_5}}">
                       ★★★★★
                     </div>
                   </article>
@@ -358,22 +357,21 @@
                     <div class="reviews__header">
                       <img
                         class="reviews__avatar"
-                        src="./assets/avatars/default.svg"
-                        alt="Аватар Анастасии"
+                        src="/assets/avatars/default.svg"
+                        alt="{{reviews.anastasia_alt}}"
                         loading="lazy"
                         decoding="async"
                         width="48"
                         height="48"
                       />
-                      <span class="reviews__name">Анастасия</span>
+                      <span class="reviews__name">{{reviews.anastasia}}</span>
                     </div>
 
                     <p class="reviews__text">
-                      Доставили за 25 минут, пицца горячая, тесто мягкое. Люблю,
-                      что можно добавить комментарий к заказу.
+                      {{reviews.anastasia_text}}
                     </p>
 
-                    <div class="reviews__rating" role="img" aria-label="Оценка 5 из 5">
+                    <div class="reviews__rating" role="img" aria-label="{{reviews.rated_5}}">
                       ★★★★★
                     </div>
                   </article>
@@ -381,22 +379,21 @@
                     <div class="reviews__header">
                       <img
                         class="reviews__avatar"
-                        src="./assets/avatars/default.svg"
-                        alt="Аватар Михаила"
+                        src="/assets/avatars/default.svg"
+                        alt="{{reviews.mykhailo_alt}}"
                         loading="lazy"
                         decoding="async"
                         width="48"
                         height="48"
                       />
-                      <span class="reviews__name">Михаил</span>
+                      <span class="reviews__name">{{reviews.mykhailo}}</span>
                     </div>
 
                     <p class="reviews__text">
-                      Удобное меню и нормальные цены. Курьер позвонил заранее,
-                      все привез в термосумке.
+                      {{reviews.mykhailo_text}}
                     </p>
 
-                    <div class="reviews__rating" role="img" aria-label="Оценка 4 из 5">
+                    <div class="reviews__rating" role="img" aria-label="{{reviews.rated_4}}">
                       ★★★★☆
                     </div>
                   </article>
@@ -404,22 +401,21 @@
                     <div class="reviews__header">
                       <img
                         class="reviews__avatar"
-                        src="./assets/avatars/default.svg"
-                        alt="Аватар Елены"
+                        src="/assets/avatars/default.svg"
+                        alt="{{reviews.olena_alt}}"
                         loading="lazy"
                         decoding="async"
                         width="48"
                         height="48"
                       />
-                      <span class="reviews__name">Елена</span>
+                      <span class="reviews__name">{{reviews.olena}}</span>
                     </div>
 
                     <p class="reviews__text">
-                      Роллы свежие, рис не переварен. Аккуратная упаковка,
-                      палочки и соусы положили без напоминаний.
+                      {{reviews.olena_text}}
                     </p>
 
-                    <div class="reviews__rating" role="img" aria-label="Оценка 5 из 5">
+                    <div class="reviews__rating" role="img" aria-label="{{reviews.rated_5}}">
                       ★★★★★
                     </div>
                   </article>
@@ -427,22 +423,21 @@
                     <div class="reviews__header">
                       <img
                         class="reviews__avatar"
-                        src="./assets/avatars/default.svg"
-                        alt="Аватар Сергея"
+                        src="/assets/avatars/default.svg"
+                        alt="{{reviews.serhii_alt}}"
                         loading="lazy"
                         decoding="async"
                         width="48"
                         height="48"
                       />
-                      <span class="reviews__name">Сергей</span>
+                      <span class="reviews__name">{{reviews.serhii}}</span>
                     </div>
 
                     <p class="reviews__text">
-                      Приложение не глючит, оплата через Apple Pay работает.
-                      Бургеры привезли без смятых булок.
+                      {{reviews.serhii_text}}
                     </p>
 
-                    <div class="reviews__rating" role="img" aria-label="Оценка 4 из 5">
+                    <div class="reviews__rating" role="img" aria-label="{{reviews.rated_4}}">
                       ★★★★☆
                     </div>
                   </article>
@@ -450,22 +445,21 @@
                     <div class="reviews__header">
                       <img
                         class="reviews__avatar"
-                        src="./assets/avatars/default.svg"
-                        alt="Аватар Виктории"
+                        src="/assets/avatars/default.svg"
+                        alt="{{reviews.viktoriia_alt}}"
                         loading="lazy"
                         decoding="async"
                         width="48"
                         height="48"
                       />
-                      <span class="reviews__name">Виктория</span>
+                      <span class="reviews__name">{{reviews.viktoriia}}</span>
                     </div>
 
                     <p class="reviews__text">
-                      Часто беру десерты, все приезжает холодным и без
-                      растаявшей глазури. Спасибо за аккуратность!
+                      {{reviews.viktoriia_text}}
                     </p>
 
-                    <div class="reviews__rating" role="img" aria-label="Оценка 5 из 5">
+                    <div class="reviews__rating" role="img" aria-label="{{reviews.rated_5}}">
                       ★★★★★
                     </div>
                   </article>
@@ -473,22 +467,21 @@
                     <div class="reviews__header">
                       <img
                         class="reviews__avatar"
-                        src="./assets/avatars/default.svg"
-                        alt="Аватар Артема"
+                        src="/assets/avatars/default.svg"
+                        alt="{{reviews.artem_alt}}"
                         loading="lazy"
                         decoding="async"
                         width="48"
                         height="48"
                       />
-                      <span class="reviews__name">Артем</span>
+                      <span class="reviews__name">{{reviews.artem}}</span>
                     </div>
 
                     <p class="reviews__text">
-                      Заказывал ночью, доставили за 35 минут. Понравилось, что
-                      статус заказа показывается в реальном времени.
+                      {{reviews.artem_text}}
                     </p>
 
-                    <div class="reviews__rating" role="img" aria-label="Оценка 5 из 5">
+                    <div class="reviews__rating" role="img" aria-label="{{reviews.rated_5}}">
                       ★★★★★
                     </div>
                   </article>
@@ -496,22 +489,21 @@
                     <div class="reviews__header">
                       <img
                         class="reviews__avatar"
-                        src="./assets/avatars/default.svg"
-                        alt="Аватар Натальи"
+                        src="/assets/avatars/default.svg"
+                        alt="{{reviews.natalia_alt}}"
                         loading="lazy"
                         decoding="async"
                         width="48"
                         height="48"
                       />
-                      <span class="reviews__name">Наталья</span>
+                      <span class="reviews__name">{{reviews.natalia}}</span>
                     </div>
 
                     <p class="reviews__text">
-                      Люблю раздел «Комбо». Соотношение цена/качество лучше, чем
-                      у конкурентов, и акции часто обновляются.
+                      {{reviews.natalia_text}}
                     </p>
 
-                    <div class="reviews__rating" role="img" aria-label="Оценка 4 из 5">
+                    <div class="reviews__rating" role="img" aria-label="{{reviews.rated_4}}">
                       ★★★★☆
                     </div>
                   </article>
@@ -519,22 +511,21 @@
                     <div class="reviews__header">
                       <img
                         class="reviews__avatar"
-                        src="./assets/avatars/default.svg"
-                        alt="Аватар Павла"
+                        src="/assets/avatars/default.svg"
+                        alt="{{reviews.pavlo_alt}}"
                         loading="lazy"
                         decoding="async"
                         width="48"
                         height="48"
                       />
-                      <span class="reviews__name">Павел</span>
+                      <span class="reviews__name">{{reviews.pavlo}}</span>
                     </div>
 
                     <p class="reviews__text">
-                      Понравилась поддержка: помогли изменить адрес уже после
-                      оформления, курьер быстро сориентировался.
+                      {{reviews.pavlo_text}}
                     </p>
 
-                    <div class="reviews__rating" role="img" aria-label="Оценка 5 из 5">
+                    <div class="reviews__rating" role="img" aria-label="{{reviews.rated_5}}">
                       ★★★★★
                     </div>
                   </article>
@@ -542,22 +533,21 @@
                     <div class="reviews__header">
                       <img
                         class="reviews__avatar"
-                        src="./assets/avatars/default.svg"
-                        alt="Аватар Ксении"
+                        src="/assets/avatars/default.svg"
+                        alt="{{reviews.kseniia_alt}}"
                         loading="lazy"
                         decoding="async"
                         width="48"
                         height="48"
                       />
-                      <span class="reviews__name">Ксения</span>
+                      <span class="reviews__name">{{reviews.kseniia}}</span>
                     </div>
 
                     <p class="reviews__text">
-                      Удобно, что есть безналичные чаевые. Курьер был вежлив,
-                      привез заказ до двери, несмотря на дождь.
+                      {{reviews.kseniia_text}}
                     </p>
 
-                    <div class="reviews__rating" role="img" aria-label="Оценка 5 из 5">
+                    <div class="reviews__rating" role="img" aria-label="{{reviews.rated_5}}">
                       ★★★★★
                     </div>
                   </article>
@@ -565,22 +555,21 @@
                     <div class="reviews__header">
                       <img
                         class="reviews__avatar"
-                        src="./assets/avatars/default.svg"
-                        alt="Аватар Дмитрия"
+                        src="/assets/avatars/default.svg"
+                        alt="{{reviews.dmytro_alt}}"
                         loading="lazy"
                         decoding="async"
                         width="48"
                         height="48"
                       />
-                      <span class="reviews__name">Дмитрий</span>
+                      <span class="reviews__name">{{reviews.dmytro}}</span>
                     </div>
 
                     <p class="reviews__text">
-                      Доставка не опаздывает, уведомления приходят вовремя.
-                      Трекинг курьера помогает планировать время.
+                      {{reviews.dmytro_text}}
                     </p>
 
-                    <div class="reviews__rating" role="img" aria-label="Оценка 4 из 5">
+                    <div class="reviews__rating" role="img" aria-label="{{reviews.rated_4}}">
                       ★★★★☆
                     </div>
                   </article>
@@ -606,7 +595,7 @@
                   aria-expanded="false"
                   aria-controls="faq-1"
                 >
-                  Что входит в доставку?
+                  {{faq.q1}}
                   <span class="faq__icon">+</span>
                 </button>
 
@@ -617,8 +606,7 @@
                   aria-hidden="true"
                 >
                   <p>
-                    Мы доставляем блюда в термосумках, чтобы еда приехала
-                    горячей и безопасной.
+                    {{faq.a1}}
                   </p>
                 </div>
               </div>
@@ -629,7 +617,7 @@
                   aria-expanded="false"
                   aria-controls="faq-2"
                 >
-                  Сколько времени занимает доставка?
+                  {{faq.q2}}
                   <span class="faq__icon">+</span>
                 </button>
 
@@ -640,8 +628,7 @@
                   aria-hidden="true"
                 >
                   <p>
-                    В среднем 30 минут по городу. Точное время показываем при
-                    оформлении заказа.
+                    {{faq.a2}}
                   </p>
                 </div>
               </div>
@@ -652,7 +639,7 @@
                   aria-expanded="false"
                   aria-controls="faq-3"
                 >
-                  Как оплатить заказ?
+                  {{faq.q3}}
                   <span class="faq__icon">+</span>
                 </button>
 
@@ -663,8 +650,7 @@
                   aria-hidden="true"
                 >
                   <p>
-                    Доступны оплата картой онлайн, Apple Pay/Google Pay и
-                    наличными курьеру.
+                    {{faq.a3}}
                   </p>
                 </div>
               </div>
@@ -675,7 +661,7 @@
                   aria-expanded="false"
                   aria-controls="faq-4"
                 >
-                  Можно ли изменить или отменить заказ?
+                  {{faq.q4}}
                   <span class="faq__icon">+</span>
                 </button>
 
@@ -686,8 +672,7 @@
                   aria-hidden="true"
                 >
                   <p>
-                    Да, свяжитесь с поддержкой в течение 5 минут после
-                    оформления, мы скорректируем заказ.
+                    {{faq.a4}}
                   </p>
                 </div>
               </div>
@@ -700,13 +685,13 @@
       <footer class="footer">
         <div class="o-container footer__inner">
           <p class="footer__copy">
-            © <span data-year></span> Foodly. Все права защищены.
+            © <span data-year></span> Foodly. {{footer.rights}}
           </p>
 
-          <nav class="footer__nav" aria-label="Навигация в футере">
-            <a href="#hero" class="footer__link">Наверх</a>
-            <a href="#catalog" class="footer__link">Меню</a>
-            <a href="#faq" class="footer__link">FAQ</a>
+          <nav class="footer__nav" aria-label="{{footer.nav_label}}">
+            <a href="#hero" class="footer__link">{{footer.top}}</a>
+            <a href="#catalog" class="footer__link">{{nav.menu}}</a>
+            <a href="#faq" class="footer__link">{{nav.faq}}</a>
           </nav>
         </div>
       </footer>
@@ -725,11 +710,11 @@
 
       <div class="cart__panel" role="document">
         <header class="cart__header">
-          <h2 id="cart-title" class="cart__title">Корзина</h2>
+          <h2 id="cart-title" class="cart__title">{{cart.title}}</h2>
           <button
             class="cart__close button button--icon"
             type="button"
-            aria-label="Закрыть корзину"
+            aria-label="{{cart.close}}"
             data-cart-close
           >
             ✕
@@ -742,13 +727,13 @@
           </ul>
 
           <p class="cart__empty" data-cart-empty>
-            В корзине пока нет блюд. Добавь что-нибудь из меню.
+            {{cart.empty}}
           </p>
         </div>
 
         <footer class="cart__footer">
           <div class="cart__total">
-            <span class="cart__total-label">Итого:</span>
+            <span class="cart__total-label">{{cart.total}}</span>
             <span class="cart__total-value" data-cart-total>0 ₴</span>
           </div>
 
@@ -756,7 +741,7 @@
             href="checkout.html"
             class="button button--primary cart__checkout-link"
           >
-            Оформить заказ
+            {{cart.checkout}}
           </a>
         </footer>
       </div>

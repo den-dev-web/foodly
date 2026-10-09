@@ -141,8 +141,8 @@ export function initCartUI(cart) {
     if (cartIcon) {
       cartIcon.src =
         totalQty > 0
-          ? "./assets/icons/empty_cart.svg"
-          : "./assets/icons/cart.svg";
+          ? `${import.meta.env.BASE_URL}assets/icons/empty_cart.svg`
+          : `${import.meta.env.BASE_URL}assets/icons/cart.svg`;
     }
 
     if (ids.length === 0) {
