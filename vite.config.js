@@ -13,6 +13,8 @@ export default defineConfig({
     assetsDir: "assets",
     emptyOutDir: true,
     cssCodeSplit: false,
+    // Keep fonts as files: inlined base64 would always load, bypassing unicode-range
+    assetsInlineLimit: (filePath) => (filePath.endsWith(".woff2") ? false : undefined),
   },
   resolve: {
     alias: {
