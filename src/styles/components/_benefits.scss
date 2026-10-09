@@ -15,9 +15,16 @@
     box-shadow: var(--shadow-soft);
 
     /* анимация появления */
-    opacity: 0;
-    transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
+
+    /* Hidden only after JS marks the card, so without JS the cards stay visible.
+       With reduced motion there is no reveal: the cards are visible from the start. */
+    @media (prefers-reduced-motion: no-preference) {
+      &[data-visible="false"] {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+    }
 
     &[data-visible="true"] {
       opacity: 1;

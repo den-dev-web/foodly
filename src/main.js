@@ -33,8 +33,6 @@ function getCurrentList() {
 }
 
 window.addEventListener("load", () => {
-  console.log("Foodly started!");
-
   // Корзина
   cart = new Cart();
   initCartUI(cart);

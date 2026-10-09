@@ -2,11 +2,12 @@
 document.querySelectorAll("[data-scroll-to]").forEach((btn) => {
   btn.addEventListener("click", () => {
     const target = document.querySelector(btn.dataset.scrollTo);
-    target?.scrollIntoView({ behavior: "smooth" });
+    target?.scrollIntoView();
   });
 });
 
 // ===== HEADER BURGER =====
+const DESKTOP_MIN_WIDTH = 768;
 const header = document.querySelector(".header");
 const burger = document.querySelector(".header__burger");
 const menu = document.querySelector(".header__menu");
@@ -42,7 +43,7 @@ if (burger) {
     if (href.startsWith("#")) {
       e.preventDefault();
       const target = document.querySelector(href);
-      target?.scrollIntoView({ behavior: "smooth" });
+      target?.scrollIntoView();
     }
     if (header.classList.contains("header--open")) {
       closeMenu();
@@ -59,7 +60,7 @@ if (burger) {
 
   const handleResize = () => {
     if (!menu) return;
-    const isDesktop = window.innerWidth >= 768;
+    const isDesktop = window.innerWidth >= DESKTOP_MIN_WIDTH;
     if (isDesktop) {
       closeMenu();
       menu.removeAttribute("aria-hidden");
@@ -79,10 +80,7 @@ export function initCategoryScrollIndicators() {
   const container = document.querySelector(".category-filter");
   const list = document.querySelector(".category-filter__list");
 
-  if (!container || !list) {
-    console.warn("ScrollIndicators: elements not found!");
-    return;
-  }
+  if (!container || !list) return;
 
   function update() {
     const maxScroll = list.scrollWidth - list.clientWidth;
@@ -193,7 +191,10 @@ export function initBenefitsReveal() {
     { threshold: 0.2 }
   );
 
-  items.forEach((item) => obs.observe(item));
+  items.forEach((item) => {
+    item.dataset.visible = "false";
+    obs.observe(item);
+  });
 }
 
 // ===== FAQ =====

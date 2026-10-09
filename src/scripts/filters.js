@@ -23,7 +23,6 @@ export function initCategoryFilter(root, onChange) {
 
     // 🔥 скроллим выбранный таб в центр
     btn.scrollIntoView({
-      behavior: "smooth",
       inline: "center",
       block: "nearest",
     });

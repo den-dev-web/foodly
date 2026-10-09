@@ -161,7 +161,6 @@ export function initCartUI(cart) {
 
       /* === ПРОДУКТА НЕТ В ДАННЫХ — ЧИСТИМ КОРЗИНУ === */
       if (!product) {
-        console.warn(`Product ${id} not found → removing from cart`);
         cart.remove(productId, variantId);
         return;
       }
