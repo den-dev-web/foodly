@@ -27,6 +27,13 @@
   &__show-more {
     margin-top: clamp(16px, 3vw, 32px);
   }
+
+  /* Empty category (e.g. no drinks yet) */
+  &__empty {
+    padding: var(--space-l);
+    color: var(--color-text-muted);
+    text-align: center;
+  }
 }
 
 /* ===== PRODUCT CARD ANIMATIONS ===== */

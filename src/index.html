@@ -275,12 +275,15 @@
 
             <!-- Реальные карточки (рендерятся JS) -->
             <div class="catalog__grid" data-catalog-grid hidden></div>
+            <p class="catalog__empty" data-catalog-empty hidden>
+              {{ui.empty_category}}
+            </p>
             <button
               class="catalog__show-more button button--secondary"
               data-show-more
               hidden
             >
-              {{catalog.show_more}}
+              {{ui.show_more}}
             </button>
           </div>
         </section>

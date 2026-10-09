@@ -1,4 +1,5 @@
 import { products } from "../data/products.js";
+import { t } from "./i18n.js";
 
 export class Cart {
   constructor() {
@@ -192,7 +193,7 @@ export function initCartUI(cart) {
             min="0"
             step="1"
             inputmode="numeric"
-            aria-label="Количество"
+            aria-label="${t.quantity}"
             value="${qty}"
           />
           <button class="cart-item__btn" data-cart-increase>+</button>

@@ -36,8 +36,7 @@
     "sushi": "Sushi",
     "burgers": "Burgers",
     "desserts": "Desserts",
-    "drinks": "Drinks",
-    "show_more": "Show more"
+    "drinks": "Drinks"
   },
   "benefits": {
     "title": "Why Foodly?",
@@ -107,5 +106,12 @@
     "empty": "Your cart is empty. Add something from the menu.",
     "total": "Total:",
     "checkout": "Checkout"
+  },
+  "ui": {
+    "add": "Add",
+    "choose_size": "Choose size",
+    "quantity": "Quantity",
+    "show_more": "Show more",
+    "empty_category": "There are no dishes in this category yet."
   }
 }

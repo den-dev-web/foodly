@@ -1,4 +1,5 @@
 import { createProductCard } from "./product-card.js";
+import { t } from "./i18n.js";
 
 export const PAGE_SIZE = 12;
 
@@ -13,19 +14,21 @@ export async function renderCatalog(list, cart, options = {}) {
   const grid = document.querySelector("[data-catalog-grid]");
   const skeleton = document.querySelector("[data-catalog-skeleton]");
   const showMore = document.querySelector("[data-show-more]");
+  const empty = document.querySelector("[data-catalog-empty]");
 
-  if (!grid || !skeleton || !showMore) return;
+  if (!grid || !skeleton || !showMore || !empty) return;
 
-  // === НЕТ ТОВАРОВ → показываем skeleton ===
-  if (!list || list.length === 0) {
+  // Data is bundled, so an empty list is an empty category, not loading
+  skeleton.hidden = true;
+  if (list.length === 0) {
     grid.hidden = true;
-    skeleton.hidden = false;
+    grid.innerHTML = "";
     showMore.hidden = true;
+    empty.hidden = false;
     return;
   }
 
-  // === ЕСТЬ ТОВАРЫ → скрываем skeleton ===
-  skeleton.hidden = true;
+  empty.hidden = true;
   grid.hidden = false;
 
   // === Fade-out старых карточек ===
@@ -53,7 +56,7 @@ export async function renderCatalog(list, cart, options = {}) {
 
   if (remaining > 0) {
     showMore.hidden = false;
-    showMore.textContent = `Показать ещё (${remaining})`;
+    showMore.textContent = `${t.show_more} (${remaining})`;
   } else {
     showMore.hidden = true;
   }

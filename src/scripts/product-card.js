@@ -1,3 +1,5 @@
+import { t } from "./i18n.js";
+
 export function createProductCard(product, cart) {
   const el = document.createElement("article");
   el.className = "product-card";
@@ -15,7 +17,7 @@ export function createProductCard(product, cart) {
 
   const variantsMarkup = hasVariants
     ? `
-      <div class="product-card__variants is-hidden" role="group" aria-label="Выбор размера" aria-hidden="true" data-variants>
+      <div class="product-card__variants is-hidden" role="group" aria-label="${t.choose_size}" aria-hidden="true" data-variants>
         ${product.variants
           .map(
             (variant, index) => `
@@ -59,7 +61,7 @@ export function createProductCard(product, cart) {
 
       <div class="product-card__actions">
 
-        <button class="product-card__add" data-product-add>Добавить</button>
+        <button class="product-card__add" data-product-add>${t.add}</button>
 
         <div class="product-card__counter" hidden>
           <button data-product-decrease class="product-card__counter-btn">-</button>
@@ -70,7 +72,7 @@ export function createProductCard(product, cart) {
             min="0"
             step="1"
             inputmode="numeric"
-            aria-label="Количество"
+            aria-label="${t.quantity}"
             value="1"
           />
           <button data-product-increase class="product-card__counter-btn">+</button>
