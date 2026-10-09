@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/foodly/assets/icons/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Foodly — fast delivery of pizza, sushi, burgers and desserts across the city."
+      content="Foodly — швидка доставка піци, суші, бургерів і десертів по місту."
     />
-    <title>Foodly — food delivery</title>
+    <title>Foodly — доставка їжі</title>
     <link rel="alternate" hreflang="en" href="https://den-dev-web.github.io/foodly/" />
     <link rel="alternate" hreflang="uk" href="https://den-dev-web.github.io/foodly/uk/" />
     <link rel="alternate" hreflang="x-default" href="https://den-dev-web.github.io/foodly/" />
@@ -31,11 +31,11 @@
             <span class="header__logo-text">Foodly</span>
           </a>
 
-          <nav class="header__nav" aria-label="Main navigation">
+          <nav class="header__nav" aria-label="Основна навігація">
             <button
               class="header__burger"
               type="button"
-              aria-label="Open menu"
+              aria-label="Відкрити меню"
               aria-expanded="false"
               aria-controls="header-menu"
             >
@@ -45,13 +45,13 @@
 
             <ul class="header__menu" id="header-menu" aria-hidden="true">
               <li class="header__menu-item">
-                <a href="#catalog" class="header__link">Menu</a>
+                <a href="#catalog" class="header__link">Меню</a>
               </li>
               <li class="header__menu-item">
-                <a href="#benefits" class="header__link">Benefits</a>
+                <a href="#benefits" class="header__link">Переваги</a>
               </li>
               <li class="header__menu-item">
-                <a href="#reviews" class="header__link">Reviews</a>
+                <a href="#reviews" class="header__link">Відгуки</a>
               </li>
               <li class="header__menu-item">
                 <a href="#faq" class="header__link">FAQ</a>
@@ -60,25 +60,25 @@
           </nav>
 
           <div class="header__actions">
-            <nav class="lang-switcher" aria-label="Language">
+            <nav class="lang-switcher" aria-label="Мова">
               <ul class="lang-switcher__list">
               <li>
                 <a
-                  class="lang-switcher__link lang-switcher__link--current"
+                  class="lang-switcher__link"
                   href="/foodly/"
                   hreflang="en"
                   lang="en"
                   title="English"
-                  aria-current="true"
                 >EN</a>
               </li>
               <li>
                 <a
-                  class="lang-switcher__link"
+                  class="lang-switcher__link lang-switcher__link--current"
                   href="/foodly/uk/"
                   hreflang="uk"
                   lang="uk"
                   title="Українська"
+                  aria-current="true"
                 >UA</a>
               </li>
               </ul>
@@ -87,12 +87,12 @@
             <button
               class="header__cart-button"
               type="button"
-              aria-label="Open cart"
+              aria-label="Відкрити кошик"
               data-cart-open
             >
               <img
                 src="/foodly/assets/icons/cart.svg"
-                alt="Cart"
+                alt="Кошик"
                 class="header__cart-icon"
                 width="32"
                 height="32"
@@ -110,37 +110,37 @@
           <div class="o-container hero__inner">
             <div class="hero__content">
               <h1 id="hero-title" class="hero__title">
-                Your favourite food delivered in 30 minutes
+                Доставка улюбленої їжі за 30 хвилин
               </h1>
               <p class="hero__subtitle">
-                Pizza, sushi, burgers, desserts and drinks — in one click.
+                Піца, суші, бургери, десерти та напої — в один клік.
               </p>
 
               <div class="hero__actions">
                 <a href="#catalog" class="button button--primary">
-                  View menu
+                  Дивитися меню
                 </a>
                 <button
                   type="button"
                   class="button button--secondary"
                   data-scroll-to="#benefits"
                 >
-                  Why Foodly?
+                  Чому Foodly?
                 </button>
               </div>
 
-              <ul class="hero__stats" aria-label="Service at a glance">
+              <ul class="hero__stats" aria-label="Коротка статистика сервісу">
                 <li class="hero__stat">
-                  <span class="hero__stat-value">30 min</span>
-                  <span class="hero__stat-label">Average delivery time</span>
+                  <span class="hero__stat-value">30 хв</span>
+                  <span class="hero__stat-label">Середній час доставки</span>
                 </li>
                 <li class="hero__stat">
                   <span class="hero__stat-value">4.9</span>
-                  <span class="hero__stat-label">Rating from reviews</span>
+                  <span class="hero__stat-label">Оцінка за відгуками</span>
                 </li>
                 <li class="hero__stat">
                   <span class="hero__stat-value">120+</span>
-                  <span class="hero__stat-label">Dishes on the menu</span>
+                  <span class="hero__stat-label">Страв у меню</span>
                 </li>
               </ul>
             </div>
@@ -166,9 +166,9 @@
         <section id="catalog" class="catalog" aria-labelledby="catalog-title">
           <div class="o-container">
             <header class="section-header">
-              <h2 id="catalog-title" class="section-title">Menu</h2>
+              <h2 id="catalog-title" class="section-title">Меню</h2>
               <p class="section-subtitle">
-                Pick your dishes, add them to the cart and place your order.
+                Обирай страви, додавай у кошик і оформлюй замовлення.
               </p>
             </header>
 
@@ -177,7 +177,7 @@
               <div
                 class="category-filter__list"
                 role="tablist"
-                aria-label="Filter dishes by category"
+                aria-label="Фільтр за категоріями страв"
               >
                 <button
                   class="category-filter__item category-filter__item--active"
@@ -186,7 +186,7 @@
                   aria-selected="true"
                   data-category="all"
                 >
-                  All
+                  Усі
                 </button>
                 <button
                   class="category-filter__item"
@@ -195,7 +195,7 @@
                   aria-selected="false"
                   data-category="pizza"
                 >
-                  Pizza
+                  Піца
                 </button>
                 <button
                   class="category-filter__item"
@@ -204,7 +204,7 @@
                   aria-selected="false"
                   data-category="sushi"
                 >
-                  Sushi
+                  Суші
                 </button>
                 <button
                   class="category-filter__item"
@@ -213,7 +213,7 @@
                   aria-selected="false"
                   data-category="burgers"
                 >
-                  Burgers
+                  Бургери
                 </button>
                 <button
                   class="category-filter__item"
@@ -222,7 +222,7 @@
                   aria-selected="false"
                   data-category="desserts"
                 >
-                  Desserts
+                  Десерти
                 </button>
                 <button
                   class="category-filter__item"
@@ -231,7 +231,7 @@
                   aria-selected="false"
                   data-category="drinks"
                 >
-                  Drinks
+                  Напої
                 </button>
               </div>
             </div>
@@ -307,14 +307,14 @@
             <!-- Реальные карточки (рендерятся JS) -->
             <div class="catalog__grid" data-catalog-grid hidden></div>
             <p class="catalog__empty" data-catalog-empty hidden>
-              There are no dishes in this category yet.
+              У цій категорії поки немає страв.
             </p>
             <button
               class="catalog__show-more button button--secondary"
               data-show-more
               hidden
             >
-              Show more
+              Показати ще
             </button>
           </div>
         </section>
@@ -327,28 +327,28 @@
         >
           <div class="o-container">
             <header class="section-header">
-              <h2 id="benefits-title" class="section-title">Why Foodly?</h2>
+              <h2 id="benefits-title" class="section-title">Чому Foodly?</h2>
             </header>
 
             <div class="benefits__grid">
               <article class="benefits__item" data-benefit>
-                <h3 class="benefits__item-title">Super-fast delivery</h3>
+                <h3 class="benefits__item-title">Супершвидка доставка</h3>
                 <p class="benefits__item-text">
-                  About 30 minutes anywhere in the city on average.
+                  У середньому за 30 хвилин по всьому місту.
                 </p>
               </article>
 
               <article class="benefits__item" data-benefit>
-                <h3 class="benefits__item-title">Quality control</h3>
+                <h3 class="benefits__item-title">Контроль якості</h3>
                 <p class="benefits__item-text">
-                  We work only with trusted kitchens and suppliers.
+                  Працюємо лише з перевіреними кухнями та постачальниками.
                 </p>
               </article>
 
               <article class="benefits__item" data-benefit>
-                <h3 class="benefits__item-title">Transparent prices</h3>
+                <h3 class="benefits__item-title">Прозорі ціни</h3>
                 <p class="benefits__item-text">
-                  No hidden fees or markups.
+                  Без прихованих комісій і націнок.
                 </p>
               </article>
             </div>
@@ -359,7 +359,7 @@
         <section id="reviews" class="reviews" aria-labelledby="reviews-title">
           <div class="o-container">
             <header class="section-header">
-              <h2 id="reviews-title" class="section-title">Reviews</h2>
+              <h2 id="reviews-title" class="section-title">Відгуки</h2>
             </header>
 
             <div class="reviews__slider" data-reviews-slider>
@@ -370,20 +370,20 @@
                       <img
                         class="reviews__avatar"
                         src="/foodly/assets/avatars/default.svg"
-                        alt="Maria’s avatar"
+                        alt="Аватар Марії"
                         loading="lazy"
                         decoding="async"
                         width="48"
                         height="48"
                       />
-                      <span class="reviews__name">Maria</span>
+                      <span class="reviews__name">Марія</span>
                     </div>
 
                     <p class="reviews__text">
-                      Super fast delivery, the food was hot and tasty! This is my third order already.
+                      Дуже швидко доставили, їжа гаряча й смачна! Замовляю вже втретє.
                     </p>
 
-                    <div class="reviews__rating" role="img" aria-label="Rated 5 out of 5">
+                    <div class="reviews__rating" role="img" aria-label="Оцінка 5 з 5">
                       ★★★★★
                     </div>
                   </article>
@@ -392,20 +392,20 @@
                       <img
                         class="reviews__avatar"
                         src="/foodly/assets/avatars/default.svg"
-                        alt="Anastasia’s avatar"
+                        alt="Аватар Анастасії"
                         loading="lazy"
                         decoding="async"
                         width="48"
                         height="48"
                       />
-                      <span class="reviews__name">Anastasia</span>
+                      <span class="reviews__name">Анастасія</span>
                     </div>
 
                     <p class="reviews__text">
-                      Delivered in 25 minutes, the pizza was hot and the dough soft. I love that you can add a note to your order.
+                      Доставили за 25 хвилин, піца гаряча, тісто м’яке. Люблю, що можна додати коментар до замовлення.
                     </p>
 
-                    <div class="reviews__rating" role="img" aria-label="Rated 5 out of 5">
+                    <div class="reviews__rating" role="img" aria-label="Оцінка 5 з 5">
                       ★★★★★
                     </div>
                   </article>
@@ -414,20 +414,20 @@
                       <img
                         class="reviews__avatar"
                         src="/foodly/assets/avatars/default.svg"
-                        alt="Mykhailo’s avatar"
+                        alt="Аватар Михайла"
                         loading="lazy"
                         decoding="async"
                         width="48"
                         height="48"
                       />
-                      <span class="reviews__name">Mykhailo</span>
+                      <span class="reviews__name">Михайло</span>
                     </div>
 
                     <p class="reviews__text">
-                      Easy-to-use menu and fair prices. The courier called ahead and brought everything in a thermal bag.
+                      Зручне меню й нормальні ціни. Кур’єр зателефонував заздалегідь, усе привіз у термосумці.
                     </p>
 
-                    <div class="reviews__rating" role="img" aria-label="Rated 4 out of 5">
+                    <div class="reviews__rating" role="img" aria-label="Оцінка 4 з 5">
                       ★★★★☆
                     </div>
                   </article>
@@ -436,20 +436,20 @@
                       <img
                         class="reviews__avatar"
                         src="/foodly/assets/avatars/default.svg"
-                        alt="Olena’s avatar"
+                        alt="Аватар Олени"
                         loading="lazy"
                         decoding="async"
                         width="48"
                         height="48"
                       />
-                      <span class="reviews__name">Olena</span>
+                      <span class="reviews__name">Олена</span>
                     </div>
 
                     <p class="reviews__text">
-                      Fresh rolls, rice not overcooked. Neat packaging, and chopsticks and sauces were included without asking.
+                      Роли свіжі, рис не переварений. Акуратне пакування, палички й соуси поклали без нагадувань.
                     </p>
 
-                    <div class="reviews__rating" role="img" aria-label="Rated 5 out of 5">
+                    <div class="reviews__rating" role="img" aria-label="Оцінка 5 з 5">
                       ★★★★★
                     </div>
                   </article>
@@ -458,20 +458,20 @@
                       <img
                         class="reviews__avatar"
                         src="/foodly/assets/avatars/default.svg"
-                        alt="Serhii’s avatar"
+                        alt="Аватар Сергія"
                         loading="lazy"
                         decoding="async"
                         width="48"
                         height="48"
                       />
-                      <span class="reviews__name">Serhii</span>
+                      <span class="reviews__name">Сергій</span>
                     </div>
 
                     <p class="reviews__text">
-                      The app runs smoothly and Apple Pay works. The burgers arrived with the buns intact.
+                      Застосунок не глючить, оплата через Apple Pay працює. Бургери привезли без зім’ятих булок.
                     </p>
 
-                    <div class="reviews__rating" role="img" aria-label="Rated 4 out of 5">
+                    <div class="reviews__rating" role="img" aria-label="Оцінка 4 з 5">
                       ★★★★☆
                     </div>
                   </article>
@@ -480,20 +480,20 @@
                       <img
                         class="reviews__avatar"
                         src="/foodly/assets/avatars/default.svg"
-                        alt="Viktoriia’s avatar"
+                        alt="Аватар Вікторії"
                         loading="lazy"
                         decoding="async"
                         width="48"
                         height="48"
                       />
-                      <span class="reviews__name">Viktoriia</span>
+                      <span class="reviews__name">Вікторія</span>
                     </div>
 
                     <p class="reviews__text">
-                      I often order desserts, and they always arrive cold with the glaze intact. Thanks for the care!
+                      Часто беру десерти, усе приїжджає холодним і без розталої глазурі. Дякую за акуратність!
                     </p>
 
-                    <div class="reviews__rating" role="img" aria-label="Rated 5 out of 5">
+                    <div class="reviews__rating" role="img" aria-label="Оцінка 5 з 5">
                       ★★★★★
                     </div>
                   </article>
@@ -502,20 +502,20 @@
                       <img
                         class="reviews__avatar"
                         src="/foodly/assets/avatars/default.svg"
-                        alt="Artem’s avatar"
+                        alt="Аватар Артема"
                         loading="lazy"
                         decoding="async"
                         width="48"
                         height="48"
                       />
-                      <span class="reviews__name">Artem</span>
+                      <span class="reviews__name">Артем</span>
                     </div>
 
                     <p class="reviews__text">
-                      Ordered late at night and got it in 35 minutes. I liked seeing the order status in real time.
+                      Замовляв уночі, доставили за 35 хвилин. Сподобалося, що статус замовлення видно в реальному часі.
                     </p>
 
-                    <div class="reviews__rating" role="img" aria-label="Rated 5 out of 5">
+                    <div class="reviews__rating" role="img" aria-label="Оцінка 5 з 5">
                       ★★★★★
                     </div>
                   </article>
@@ -524,20 +524,20 @@
                       <img
                         class="reviews__avatar"
                         src="/foodly/assets/avatars/default.svg"
-                        alt="Natalia’s avatar"
+                        alt="Аватар Наталі"
                         loading="lazy"
                         decoding="async"
                         width="48"
                         height="48"
                       />
-                      <span class="reviews__name">Natalia</span>
+                      <span class="reviews__name">Наталя</span>
                     </div>
 
                     <p class="reviews__text">
-                      I love the “Combo” section. Better value for money than the competition, and the deals change often.
+                      Люблю розділ «Комбо». Співвідношення ціна/якість краще, ніж у конкурентів, і акції часто оновлюються.
                     </p>
 
-                    <div class="reviews__rating" role="img" aria-label="Rated 4 out of 5">
+                    <div class="reviews__rating" role="img" aria-label="Оцінка 4 з 5">
                       ★★★★☆
                     </div>
                   </article>
@@ -546,20 +546,20 @@
                       <img
                         class="reviews__avatar"
                         src="/foodly/assets/avatars/default.svg"
-                        alt="Pavlo’s avatar"
+                        alt="Аватар Павла"
                         loading="lazy"
                         decoding="async"
                         width="48"
                         height="48"
                       />
-                      <span class="reviews__name">Pavlo</span>
+                      <span class="reviews__name">Павло</span>
                     </div>
 
                     <p class="reviews__text">
-                      Great support: they helped me change the address after I had ordered, and the courier adapted quickly.
+                      Сподобалася підтримка: допомогли змінити адресу вже після оформлення, кур’єр швидко зорієнтувався.
                     </p>
 
-                    <div class="reviews__rating" role="img" aria-label="Rated 5 out of 5">
+                    <div class="reviews__rating" role="img" aria-label="Оцінка 5 з 5">
                       ★★★★★
                     </div>
                   </article>
@@ -568,20 +568,20 @@
                       <img
                         class="reviews__avatar"
                         src="/foodly/assets/avatars/default.svg"
-                        alt="Kseniia’s avatar"
+                        alt="Аватар Ксенії"
                         loading="lazy"
                         decoding="async"
                         width="48"
                         height="48"
                       />
-                      <span class="reviews__name">Kseniia</span>
+                      <span class="reviews__name">Ксенія</span>
                     </div>
 
                     <p class="reviews__text">
-                      Handy that you can tip by card. The courier was polite and brought the order to my door despite the rain.
+                      Зручно, що є безготівкові чайові. Кур’єр був ввічливий, привіз замовлення до дверей, попри дощ.
                     </p>
 
-                    <div class="reviews__rating" role="img" aria-label="Rated 5 out of 5">
+                    <div class="reviews__rating" role="img" aria-label="Оцінка 5 з 5">
                       ★★★★★
                     </div>
                   </article>
@@ -590,20 +590,20 @@
                       <img
                         class="reviews__avatar"
                         src="/foodly/assets/avatars/default.svg"
-                        alt="Dmytro’s avatar"
+                        alt="Аватар Дмитра"
                         loading="lazy"
                         decoding="async"
                         width="48"
                         height="48"
                       />
-                      <span class="reviews__name">Dmytro</span>
+                      <span class="reviews__name">Дмитро</span>
                     </div>
 
                     <p class="reviews__text">
-                      Deliveries are never late and notifications arrive on time. Courier tracking helps me plan my time.
+                      Доставка не запізнюється, сповіщення надходять вчасно. Відстеження кур’єра допомагає планувати час.
                     </p>
 
-                    <div class="reviews__rating" role="img" aria-label="Rated 4 out of 5">
+                    <div class="reviews__rating" role="img" aria-label="Оцінка 4 з 5">
                       ★★★★☆
                     </div>
                   </article>
@@ -629,7 +629,7 @@
                   aria-expanded="false"
                   aria-controls="faq-1"
                 >
-                  What does delivery include?
+                  Що входить у доставку?
                   <span class="faq__icon">+</span>
                 </button>
 
@@ -640,7 +640,7 @@
                   aria-hidden="true"
                 >
                   <p>
-                    We deliver in thermal bags so your food arrives hot and safe.
+                    Ми доставляємо страви в термосумках, щоб їжа приїхала гарячою та безпечною.
                   </p>
                 </div>
               </div>
@@ -651,7 +651,7 @@
                   aria-expanded="false"
                   aria-controls="faq-2"
                 >
-                  How long does delivery take?
+                  Скільки часу триває доставка?
                   <span class="faq__icon">+</span>
                 </button>
 
@@ -662,7 +662,7 @@
                   aria-hidden="true"
                 >
                   <p>
-                    About 30 minutes across the city on average. We show the exact time at checkout.
+                    У середньому 30 хвилин по місту. Точний час показуємо під час оформлення замовлення.
                   </p>
                 </div>
               </div>
@@ -673,7 +673,7 @@
                   aria-expanded="false"
                   aria-controls="faq-3"
                 >
-                  How can I pay for my order?
+                  Як оплатити замовлення?
                   <span class="faq__icon">+</span>
                 </button>
 
@@ -684,7 +684,7 @@
                   aria-hidden="true"
                 >
                   <p>
-                    Pay by card online, with Apple Pay/Google Pay, or in cash to the courier.
+                    Доступна оплата карткою онлайн, Apple Pay/Google Pay і готівкою кур’єру.
                   </p>
                 </div>
               </div>
@@ -695,7 +695,7 @@
                   aria-expanded="false"
                   aria-controls="faq-4"
                 >
-                  Can I change or cancel my order?
+                  Чи можна змінити або скасувати замовлення?
                   <span class="faq__icon">+</span>
                 </button>
 
@@ -706,7 +706,7 @@
                   aria-hidden="true"
                 >
                   <p>
-                    Yes, contact support within 5 minutes of placing it and we will adjust your order.
+                    Так, зв’яжіться з підтримкою протягом 5 хвилин після оформлення, і ми скоригуємо замовлення.
                   </p>
                 </div>
               </div>
@@ -719,12 +719,12 @@
       <footer class="footer">
         <div class="o-container footer__inner">
           <p class="footer__copy">
-            © <span data-year></span> Foodly. All rights reserved.
+            © <span data-year></span> Foodly. Усі права захищені.
           </p>
 
-          <nav class="footer__nav" aria-label="Footer navigation">
-            <a href="#hero" class="footer__link">Back to top</a>
-            <a href="#catalog" class="footer__link">Menu</a>
+          <nav class="footer__nav" aria-label="Навігація у футері">
+            <a href="#hero" class="footer__link">Нагору</a>
+            <a href="#catalog" class="footer__link">Меню</a>
             <a href="#faq" class="footer__link">FAQ</a>
           </nav>
         </div>
@@ -744,11 +744,11 @@
 
       <div class="cart__panel" role="document">
         <header class="cart__header">
-          <h2 id="cart-title" class="cart__title">Cart</h2>
+          <h2 id="cart-title" class="cart__title">Кошик</h2>
           <button
             class="cart__close button button--icon"
             type="button"
-            aria-label="Close cart"
+            aria-label="Закрити кошик"
             data-cart-close
           >
             ✕
@@ -761,13 +761,13 @@
           </ul>
 
           <p class="cart__empty" data-cart-empty>
-            Your cart is empty. Add something from the menu.
+            У кошику поки немає страв. Додай щось із меню.
           </p>
         </div>
 
         <footer class="cart__footer">
           <div class="cart__total">
-            <span class="cart__total-label">Total:</span>
+            <span class="cart__total-label">Разом:</span>
             <span class="cart__total-value" data-cart-total>0 ₴</span>
           </div>
 
@@ -775,7 +775,7 @@
             href="checkout.html"
             class="button button--primary cart__checkout-link"
           >
-            Checkout
+            Оформити замовлення
           </a>
         </footer>
       </div>
