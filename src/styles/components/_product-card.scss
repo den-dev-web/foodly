@@ -112,7 +112,7 @@
     border-radius: var(--radius-s);
     font-size: 0.9rem;
     background: var(--color-primary);
-    color: #fff;
+    color: var(--color-on-primary);
     transition: background-color 0.25s ease;
 
     &:focus-visible {
@@ -123,7 +123,7 @@
 
   @media (hover: hover) {
     &__add:hover {
-      background-color: #ff7f23;
+      background-color: var(--color-primary-hover);
     }
   }
 

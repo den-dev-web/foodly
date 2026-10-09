@@ -3,11 +3,14 @@
   --color-surface: #0b1020;
   --color-surface-alt: #111827;
   --color-primary: #f97316;
+  --color-primary-hover: #ff7f23;
   --color-primary-soft: rgba(249, 115, 22, 0.1);
   --color-secondary: #f97316;
   --color-text: #f9fafb;
   --color-text-muted: #9ca3af;
   --color-border: rgba(148, 163, 184, 0.4);
+  /* Text on --color-primary backgrounds: dark gives 7.1:1, white only 2.8:1 (WCAG AA needs 4.5:1) */
+  --color-on-primary: var(--color-bg);
 
   --radius-xs: 6px;
   --radius-s: 10px;

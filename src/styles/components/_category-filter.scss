@@ -111,7 +111,7 @@
 
 .category-filter__item--active {
   background-color: var(--color-primary);
-  color: #fff;
+  color: var(--color-on-primary);
   border-color: var(--color-primary);
   box-shadow: 0 4px 14px rgba(255, 128, 40, 0.5);
   z-index: 2;
