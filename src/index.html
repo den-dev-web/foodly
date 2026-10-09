@@ -9,6 +9,7 @@
       content="{{meta.description}}"
     />
     <title>{{meta.title}}</title>
+    {{page.alternates}}
   </head>
   <body>
     <div id="app">
@@ -54,21 +55,29 @@
             </ul>
           </nav>
 
-          <button
-            class="header__cart-button"
-            type="button"
-            aria-label="{{header.open_cart}}"
-            data-cart-open
-          >
-            <img
-              src="/assets/icons/cart.svg"
-              alt="{{header.cart_alt}}"
-              class="header__cart-icon"
-              width="32"
-              height="32"
-            />
-            <span class="header__cart-counter" data-cart-count>0</span>
-          </button>
+          <div class="header__actions">
+            <nav class="lang-switcher" aria-label="{{header.language}}">
+              <ul class="lang-switcher__list">
+              {{page.lang_switcher}}
+              </ul>
+            </nav>
+
+            <button
+              class="header__cart-button"
+              type="button"
+              aria-label="{{header.open_cart}}"
+              data-cart-open
+            >
+              <img
+                src="/assets/icons/cart.svg"
+                alt="{{header.cart_alt}}"
+                class="header__cart-icon"
+                width="32"
+                height="32"
+              />
+              <span class="header__cart-counter" data-cart-count>0</span>
+            </button>
+          </div>
         </div>
         <div class="header__overlay" data-header-overlay></div>
       </header>

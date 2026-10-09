@@ -1,0 +1,40 @@
+/* Language switcher (header) */
+.lang-switcher {
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    list-style: none;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: var(--space-xl);
+    min-height: var(--space-xl);
+    padding: 0 var(--space-s);
+    border-radius: var(--radius-s);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+
+    @media (hover: hover) {
+      &:hover {
+        background-color: var(--color-surface-alt);
+        color: var(--color-text);
+      }
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 3px;
+    }
+
+    &--current {
+      color: var(--color-primary);
+    }
+  }
+}
